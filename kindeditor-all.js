@@ -3601,7 +3601,7 @@ function _getInitHtml(themesPath, bodyClass, cssPath, cssData) {
 		'<head><meta charset="utf-8" /><title></title>',
 		'<meta name="referrer" content="never">',
 		'<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">',
-		'<link rel="stylesheet" type="text/css" href="/css/iframe.css">',
+		'<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/qian52493/Wechat@1.0/css/iframe.css">',
 		'<style>',
 		'html {margin:0;padding:0;}',
 		'body {margin:0;padding:5px;}',
@@ -3703,7 +3703,7 @@ _extend(KEdit, KWidget, {
 				(isDocumentDomain ? 'document.domain="' + document.domain + '";' : '') +
 				'document.close();'),
 			iframeSrc = _IE ? ' src="javascript:void(function(){' + encodeURIComponent(srcScript) + '}())"' : '';
-		self.iframe = K('<iframe class="ke-edit-iframe" hidefocus="true" frameborder="0"' + iframeSrc + '></iframe>').css('width', '100%');
+		self.iframe = K('<iframe class="ke-edit-iframe" id="myIframe" hidefocus="true" frameborder="0"' + iframeSrc + '></iframe>').css('width', '100%');
 		self.textarea = K('<textarea class="ke-edit-textarea" hidefocus="true"></textarea>').css('width', '100%');
 		self.tabIndex = isNaN(parseInt(options.tabIndex, 10)) ? self.srcElement.attr('tabindex') : parseInt(options.tabIndex, 10);
 		self.iframe.attr('tabindex', self.tabIndex);
